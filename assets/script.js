@@ -11,14 +11,14 @@ function generatePassword() {
   window.alert("Welcome to Password Generator")
   window.alert("Please selec the following criteria");
 
-  var passwordLenght = window.prompt("Please specify the lenght of your password! Range from 8 to 128 characters!")
-  if (passwordLenght < 8 || passwordLenght > 128 || passwordLenght === "" || passwordLenght === null) {
+  var passwordLength = window.prompt("Please specify the lenght of your password! Range from 8 to 128 characters!")
+  if (passwordLength < 8 || passwordLength > 128 || passwordLength === "" || passwordLength === null) {
     window.alert("Invalid entry. Please Try again.");
     return generatePassword();
   } else {
-    console.log(passwordLenght);
+    console.log(passwordLength);
   }
-//  window.alert("You have selected a password of the lenght of " + passwordLenght);
+//  window.alert("You have selected a password of the lenght of " + passwordLength);
 
   var lowerCase = window.confirm("Would you like to have lowercase?");
   if (lowerCase) {
@@ -50,8 +50,8 @@ function generatePassword() {
   }
   
   var password = "";
-  for (var i = 0; i < passwordLenght; i++) {
-    var randomNum = Math.floor(Math.random() * charactersArr.lenght);
+  for (var i = 0; i < passwordLength; i++) {
+    var randomNum = Math.floor(Math.random() * charactersArr.length);
     password = password + charactersArr[randomNum];
   }
   console.log(password); 
